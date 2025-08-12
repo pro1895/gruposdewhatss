@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupos de WhatsApp - Encontre os Melhores Links de Grupos</title>
+    <meta name="description" content="Participe dos Melhores Grupos de WhatsApp: Negócios, Tecnologia, Educação e Mais! Descubra os Melhores Links de Grupos de WhatsApp">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fab fa-whatsapp"></i>
+                    <a href="index.html" class="logo-link">
+                        <span>Grupos de WhatsApp</span>
+                    </a>
+                </div>
+                
+                <div class="nav-buttons">
+                    <button class="btn btn-primary" id="enviarGrupoBtn">
+                        <i class="fas fa-plus"></i>
+                        <span>Enviar Grupo</span>
+                    </button>
+                    <button class="btn btn-secondary" id="loginBtn">
+                        <i class="fas fa-user"></i>
+                        <span>Entrar / Cadastrar</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search Bar Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" placeholder="Faça sua busca..." id="searchInput">
+                <button class="search-btn" id="searchBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Groups Grid -->
+            <div class="groups-grid" id="groupsGrid">
+                <!-- Groups will be dynamically inserted here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="auth.js"></script>
+    <script type="module">
+        // Importar e disponibilizar groupService globalmente
+        import { groupService } from './services/groupService.js';
+        window.groupService = groupService;
+        console.log('✅ GroupService carregado globalmente na página inicial');
+    </script>
+    <script src="script.js"></script>
+    <script src="blocking.js"></script>
+</body>
+</html>
